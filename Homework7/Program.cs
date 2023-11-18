@@ -25,14 +25,17 @@ internal class Program
         var sum1 = Sum1(arr);
         stopwatch.Stop();
         Console.WriteLine($"Обычное Время: {stopwatch.ElapsedTicks}");
+        stopwatch.Reset();
         stopwatch.Start();
         var sum2 = Sum2(list);
-        Console.WriteLine($"Thread  Время: {stopwatch.ElapsedTicks}");
         stopwatch.Stop();
+        Console.WriteLine($"Thread  Время: {stopwatch.ElapsedTicks}");
+        stopwatch.Reset();
         stopwatch.Start();
         var sum3 = Sum3(arr);
         stopwatch.Stop();
-        Console.WriteLine($"LINQ    Время: {stopwatch.ElapsedTicks}"); 
+        Console.WriteLine($"LINQ    Время: {stopwatch.ElapsedTicks}");
+        stopwatch.Reset();
     }
 
 
